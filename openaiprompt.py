@@ -25,3 +25,22 @@ def getReplies(message_list):
         message_history.append({"role":"assistant","content":temp})
         reply_content.append(temp)
     return reply_content
+
+def getChatHistory(message_list,message_history = []):
+    openai.api_key = open("key.txt","r").read().strip("\n")
+    for message in message_list:
+        message_history.append({"role":"user","content":message})
+        completion =openai.ChatCompletion.create(
+            model ="gpt-3.5-turbo",
+            messages = message_history
+        )
+        temp = completion.choices[-1].message.content
+        message_history.append({"role":"assistant","content":temp})
+    return message_history
+
+def extractReplies(message_history):
+    reply_content=[]
+    for message in message_history:
+        if message["role"] == "assistant":
+            reply_content.append(message["content"])
+    return reply_content
