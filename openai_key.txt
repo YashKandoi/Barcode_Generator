@@ -1,1 +1,1 @@
-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
+insert your OpenAI secret API key here
