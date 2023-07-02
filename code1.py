@@ -23,10 +23,11 @@ def execute_code():
     tax_percentage = float(tax_entry.get())
     profit_percentage = float(profit_entry.get())
 
+    nanonets_api_key = open("nanonets_key.txt","r").read().strip("\n")
     data = {"file": open(file_path, "rb")}
     response = requests.post(
         url,
-        auth=requests.auth.HTTPBasicAuth("a71e898c-f947-11ed-98af-ce47f9786cdf", ""),
+        auth=requests.auth.HTTPBasicAuth(nanonets_api_key, ""),
         files=data,
     )
     response_json = response.json()
@@ -63,44 +64,10 @@ def execute_code():
         "Don’t include the courier charge\n" + data
     )
     y = oai.getReply(x)
-    a = (
-        "Please use this information and generate a table as per product with their individual prices "
-        "after adding a "
-        + str(tax_percentage)
-        + "% tax on the line amount and "
-        + str(profit_percentage)
-        + "% "
-        "profit after that. "
-        "Please output the "
-        "following fields: "
-        "seller, product, price, "
-        "quantity, line_amount, Tax "
-        "%, Tax, Profit %, Profit, "
-        "Final Price(After tax and "
-        "profit), final price per "
-        "piece and sequentially increasing 12 digit number as a barcode for each "
-        "product. "
-        "If the quantity is more "
-        "than one, display it for "
-        "each piece. "
-        "Please round off all "
-        "figures to the nearest "
-        "integer. Please generate "
-        "a sequentially increasing "
-        "12 digit number as a barcode "
-        "for each product piece. "
-        "You should have duplicate "
-        "entries for products having "
-        "more than one quantity, so "
-        "that each individual item "
-        "of the same product has a "
-        "different barcode"
-    )
+    a = "Please use this information and generate a table as per product with their individual prices after adding a " + str(tax_percentage) + "% tax on the line amount and " + str(profit_percentage) + "% profit after that. Please output the following fields: seller, product, price, quantity, line_amount, Tax %, Tax, Profit %, Profit, Final Price(After tax and profit), final price per piece and sequentially increasing 12 digit number as a barcode for each product. If the quantity is more than one, display it for each piece. Please round off all figures to the nearest integer. Please generate a sequentially increasing 12 digit number as a barcode for each product piece. You should have duplicate entries for products having more than one quantity, so that each individual item of the same product has a different barcode."
 
     z = oai.getReply(a + "\n" + y)
-    d = oai.getReply(
-        "Please convert the following information into a .csv file format\n" + z
-    )
+    d = oai.getReply("Please convert the following information into a .csv file format\n" + z)
     oai.createCSV(d)
 
     file_path = "temp.csv"

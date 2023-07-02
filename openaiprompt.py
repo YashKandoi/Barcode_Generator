@@ -3,7 +3,7 @@
 import openai
 
 def getReply(promptText):
-    openai.api_key = open("key.txt","r").read().strip("\n")
+    openai.api_key = open("openai_key.txt","r").read().strip("\n")
     completion =openai.ChatCompletion.create(
         model ="gpt-3.5-turbo-16k",
         messages = [{"role":"user","content":promptText}]
