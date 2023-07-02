@@ -1,27 +1,21 @@
+from flask import Flask, request, jsonify
 import requests
 import json
 import subprocess
 import sys
-import tkinter as tk
-from tkinter import filedialog
+import openai_code as oai
 
-import openaiprompt as oai
+app = Flask(__name__)
 
+@app.route('/process_data', methods=['POST'])
+def process_data():
+    # Get the file path, tax percentage, and profit percentage from the request
+    file_path = request.form.get('file_path')
+    tax_percentage = float(request.form.get('tax_percentage'))
+    profit_percentage = float(request.form.get('profit_percentage'))
 
-def upload_file():
-    file_path = filedialog.askopenfilename()
-    file_entry.delete(0, tk.END)
-    file_entry.insert(tk.END, file_path)
-
-
-def execute_code():
-    loading_label.config(text="Loading...")
-    root.update()
-
+    # Perform the data processing steps
     url = 'https://app.nanonets.com/api/v2/OCR/Model/ef653ad5-a2fd-486e-af23-d9ec6b677db5/LabelFile/?async=false'
-    file_path = file_entry.get()
-    tax_percentage = float(tax_entry.get())
-    profit_percentage = float(profit_entry.get())
 
     data = {'file': open(file_path, 'rb')}
     response = requests.post(url, auth=requests.auth.HTTPBasicAuth('a71e898c-f947-11ed-98af-ce47f9786cdf', ''), files=data)
@@ -54,7 +48,7 @@ def execute_code():
                                                                                                             '%, Tax, Profit %, Profit, ' \
                                                                                                             'Final Price(After tax and ' \
                                                                                                             'profit), final price per ' \
-                                                                                                            'piece and sequentially increasing 12 digit number as a barcode for each ' \
+                                                                                                            'piece and barcode for each ' \
                                                                                                             'product. ' \
                                                                                                             'If the quantity is more ' \
                                                                                                             'than one, display it for ' \
@@ -79,8 +73,9 @@ def execute_code():
     file_path = 'temp.csv'
     open_csv_file(file_path)
 
-    loading_label.config(text="Completed!")
-
+    # Return a response
+    response = {'message': 'Data processed successfully'}
+    return jsonify(response)
 
 def delete_fields_from_json(json_file_path, fields_to_delete):
     with open(json_file_path, 'r') as file:
@@ -129,35 +124,5 @@ def open_csv_file(file_path):
     except Exception as e:
         print(f"Error occurred while opening the file: {e}")
 
-
-root = tk.Tk()
-root.title("File Upload")
-
-file_label = tk.Label(root, text="Select File:")
-file_label.grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-
-file_entry = tk.Entry(root, width=40)
-file_entry.grid(row=0, column=1, padx=10, pady=5)
-
-browse_button = tk.Button(root, text="Browse", command=upload_file)
-browse_button.grid(row=0, column=2, padx=10, pady=5)
-
-tax_label = tk.Label(root, text="Tax Percentage:")
-tax_label.grid(row=1, column=0, sticky=tk.W, padx=10, pady=5)
-
-tax_entry = tk.Entry(root, width=40)
-tax_entry.grid(row=1, column=1, padx=10, pady=5)
-
-profit_label = tk.Label(root, text="Profit Percentage:")
-profit_label.grid(row=2, column=0, sticky=tk.W, padx=10, pady=5)
-
-profit_entry = tk.Entry(root, width=40)
-profit_entry.grid(row=2, column=1, padx=10, pady=5)
-
-execute_button = tk.Button(root, text="Execute", command=execute_code)
-execute_button.grid(row=3, column=1, padx=10, pady=5)
-
-loading_label = tk.Label(root, text="")
-loading_label.grid(row=4, column=1, pady=5)
-
-root.mainloop()
+if __name__ == '__main__':
+    app.run(debug=True)
