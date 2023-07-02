@@ -26,7 +26,7 @@ def getReplies(message_list):
         reply_content.append(temp)
     return reply_content
 
-def getChatHistory(message_list,message_history = []):
+def getChatHistory(message_list,message_history):
     openai.api_key = open("key.txt","r").read().strip("\n")
     for message in message_list:
         message_history.append({"role":"user","content":message})
