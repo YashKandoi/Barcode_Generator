@@ -44,3 +44,10 @@ def extractReplies(message_history):
         if message["role"] == "assistant":
             reply_content.append(message["content"])
     return reply_content
+    
+def extractPrompts(message_history):
+    reply_content=[]
+    for message in message_history:
+        if message["role"] == "user":
+            reply_content.append(message["content"])
+    return reply_content
