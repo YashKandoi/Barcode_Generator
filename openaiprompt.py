@@ -5,7 +5,7 @@ import openai
 def getReply(promptText):
     openai.api_key = open("key.txt","r").read().strip("\n")
     completion =openai.ChatCompletion.create(
-        model ="gpt-3.5-turbo",
+        model ="gpt-3.5-turbo-16k",
         messages = [{"role":"user","content":promptText}]
     )
     reply_content = completion.choices[0].message.content
@@ -18,7 +18,7 @@ def getReplies(message_list):
     for message in message_list:
         message_history.append({"role":"user","content":message})
         completion =openai.ChatCompletion.create(
-            model ="gpt-3.5-turbo",
+            model ="gpt-3.5-turbo-16k",
             messages = message_history
         )
         temp = completion.choices[-1].message.content
@@ -31,7 +31,7 @@ def getChatHistory(message_list,message_history):
     for message in message_list:
         message_history.append({"role":"user","content":message})
         completion =openai.ChatCompletion.create(
-            model ="gpt-3.5-turbo",
+            model ="gpt-3.5-turbo-16k",
             messages = message_history
         )
         temp = completion.choices[-1].message.content
@@ -44,7 +44,7 @@ def extractReplies(message_history):
         if message["role"] == "assistant":
             reply_content.append(message["content"])
     return reply_content
-    
+
 def extractPrompts(message_history):
     reply_content=[]
     for message in message_history:
@@ -59,7 +59,8 @@ def extractCode(reply):
     return(reply[start:end])
 
 def createCSV(reply):
-    content = extractCode(reply)
+    if reply.find("```") != -1:
+        reply = extractCode(reply)
     file_path = "temp.csv"
     with open(file_path, 'w') as file:
-        file.write(content)
+        file.write(reply)
