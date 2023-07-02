@@ -5,7 +5,7 @@ import sys
 import tkinter as tk
 from tkinter import filedialog
 
-import openai_code as oai
+import openaiprompt as oai
 
 
 def upload_file():
