@@ -53,7 +53,7 @@ def extractPrompts(message_history):
     return reply_content
 
 def extractCode(reply):
-    delimiter = "'''"
+    delimiter = "```"
     start = reply.index(delimiter) + len(delimiter)
     end = reply.rindex(delimiter)
     return(reply[start:end])
