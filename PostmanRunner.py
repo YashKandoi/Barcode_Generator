@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,send_file
 import Main
 
 app = Flask(__name__)
@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route('/api/generateBarCode', methods=['POST'])
 def generateBarCode():
     Main.main()
-    return {}
+    file_path = "temp.csv"
+    return send_file(file_path, mimetype='text/csv', as_attachment=True)
 if __name__ == '__main__':
     app.run()
