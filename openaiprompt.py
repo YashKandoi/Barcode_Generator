@@ -51,3 +51,15 @@ def extractPrompts(message_history):
         if message["role"] == "user":
             reply_content.append(message["content"])
     return reply_content
+
+def extractCode(reply):
+    delimiter = "'''"
+    start = reply.index(delimiter) + len(delimiter)
+    end = reply.rindex(delimiter)
+    return(reply[start:end])
+
+def createCSV(reply):
+    content = extractCode(reply)
+    file_path = "temp.csv"
+    with open(file_path, 'w') as file:
+        file.write(content)
