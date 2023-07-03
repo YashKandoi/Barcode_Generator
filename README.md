@@ -1,5 +1,7 @@
 # Track 2 LLM API Endpoint : Barcode_Generator
 
+An AI based barcode generator which enables you to generate barcode of products by uploading their invoice and input the tax and profit percentage.
+
 ## How to Use
 
 ### Prereqs
