@@ -9,7 +9,9 @@ Run the following command in terminal:
 pip install -r requirements.txt
 
 ### Run API
-Create a secret API key from https://platform.openai.com/account/api-keys and paste it in openai_key.txt
+1. Create a secret API key from https://app.nanonets.com/#/keys and paste it in nanonets_key.txt
+
+2. Create a secret API key from https://platform.openai.com/account/api-keys and paste it in openai_key.txt
 
 If the key does not seem to work, then create a new OpenAI account with a different phone number and create a new key from that account
 
