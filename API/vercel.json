@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "api/PostmanRunner.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "api/PostmanRunner.py"
+        }
+    ]
+}
