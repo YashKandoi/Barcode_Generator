@@ -1,5 +1,6 @@
 # Track 2 LLM API Endpoint : Barcode_Generator
 
+Please check out the code on 9 July branch. This is currently going changes for deployment.
 An AI based barcode generator which enables you to generate barcode of products by uploading their invoice and input the tax and profit percentage.
 Check out the demo video here: [https://lnkd.in/dQA2NaJA](https://drive.google.com/file/d/1yePaWPwNxN2HSAFCRaMqfFODaMGJ3_0U/view)
 We will soon be deploying this and releasing it for everyone to be able to use!
