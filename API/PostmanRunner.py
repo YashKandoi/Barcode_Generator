@@ -8,5 +8,6 @@ app = Flask(__name__)
 def generateBarCode():
     frontend.upload_file()
     frontend.execute_code()
+    return "Bar Code Generated Successfully"
 if __name__ == '__main__':
     app.run()
