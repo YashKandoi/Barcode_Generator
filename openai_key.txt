@@ -1,1 +1,1 @@
-insert your OpenAI secret API key here
+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

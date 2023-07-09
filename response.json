@@ -1,0 +1,367 @@
+{
+    "message": "Success",
+    "result": [
+        {
+            "message": "Success",
+            "input": "bill 1.png",
+            "prediction": [
+                {
+                    "label": "seller_name",
+                    "ocr_text": "ANU NEETI CREATION PRIVATE LIMITED",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "seller_address",
+                    "ocr_text": "48A PARK STREET , PARK STREET AREA KOLKATA WEST BENGAL -700016",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "invoice_number",
+                    "ocr_text": "ANC / 0140 / 23-24",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "invoice_date",
+                    "ocr_text": "5 - May - 23",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "seller_vat_number",
+                    "ocr_text": "19AAWCA8527H1ZZ",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "seller_phone",
+                    "ocr_text": "03340667072,9830503179",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "seller_email",
+                    "ocr_text": "anuneeticreation@gmail.com",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "buyer_name",
+                    "ocr_text": "SAARANGI FASHIONS",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "buyer_address",
+                    "ocr_text": "CAMPUS , KANDOI HOUSE , S F ROAD , SILIGURI - 734005 , M - 9475270348 /",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "buyer_vat_number",
+                    "ocr_text": "19AAQHR4811L1ZI",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "invoice_amount",
+                    "ocr_text": "11,569.00",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "currency",
+                    "ocr_text": "INR",
+                    "type": "field",
+                    "page_no": 0
+                },
+                {
+                    "label": "table",
+                    "ocr_text": "table",
+                    "type": "table",
+                    "cells": [
+                        {
+                            "row": 1,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "AN - 647 C / R",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 1,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "2 Pcs",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 1,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "2,195.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 1,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "3,951.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 2,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "AN - 173",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 2,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "1 Pcs",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 2,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "3,095.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 2,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "2,785.50",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 3,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "ARV - 670 KORA",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 3,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "2 Pcs",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 3,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "1,895.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 3,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "3,411.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 4,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 4,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 4,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 4,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "10,147.50",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 5,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "Sky King Courier Charge",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 5,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 5,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 5,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "182.00",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 6,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "Output Cgst @ 6 %",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 6,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 6,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "6",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 6,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "619.77",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 7,
+                            "col": 1,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Description",
+                            "text": "Out Put Sgst @ 6 %",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 7,
+                            "col": 2,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Quantity",
+                            "text": "",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 7,
+                            "col": 3,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Price",
+                            "text": "6",
+                            "row_label": ""
+                        },
+                        {
+                            "row": 7,
+                            "col": 4,
+                            "row_span": 1,
+                            "col_span": 1,
+                            "label": "Line_Amount",
+                            "text": "619.77",
+                            "row_label": ""
+                        }
+                    ],
+                    "page_no": 0
+                }
+            ],
+            "size": {
+                "width": 1422,
+                "height": 1460
+            }
+        }
+    ],
+    "signed_urls": {
+        "uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg": {
+            "original": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?expires=1688942570&or=0&s=08aacfedc62ca43b84bb5cc6374de28e",
+            "original_compressed": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?auto=compress&expires=1688942570&or=0&s=c62b7849275110f43c7ed147966e75e4",
+            "thumbnail": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?auto=compress&expires=1688942570&w=240&s=4008641ae2e0b50d99a756f454924c6d",
+            "acw_rotate_90": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?auto=compress&expires=1688942570&or=270&s=4262f20d36d963f2e505c10d6b6853cc",
+            "acw_rotate_180": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?auto=compress&expires=1688942570&or=180&s=5cf8c9def70e2a900f6652f17b2d7640",
+            "acw_rotate_270": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?auto=compress&expires=1688942570&or=90&s=9be5fe92bf175900eed3e2326ef690b9",
+            "original_with_long_expiry": "https://nnts.imgix.net/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/PredictionImages/01db41ab-1696-426a-81d9-4a3ef8f7f314.jpeg?expires=1704480170&or=0&s=90e0b93fc794ad27d5d2e5aa6c5c5f23"
+        },
+        "uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/RawPredictions/b0ebb0ca-36ca-450a-8df2-7642c6c25322.png": {
+            "original": "https://nanonets.s3.us-west-2.amazonaws.com/uploadedfiles/ef653ad5-a2fd-486e-af23-d9ec6b677db5/RawPredictions/b0ebb0ca-36ca-450a-8df2-7642c6c25322.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5F4WPNNTLX3QHN4W%2F20230709%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230709T184250Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&response-cache-control=no-cache&X-Amz-Signature=1a48ef2197a3c49163e0da7dbe7c1619954c3cc6661e64c99d01caef5f733554",
+            "original_compressed": "",
+            "thumbnail": "",
+            "acw_rotate_90": "",
+            "acw_rotate_180": "",
+            "acw_rotate_270": "",
+            "original_with_long_expiry": ""
+        }
+    }
+}
