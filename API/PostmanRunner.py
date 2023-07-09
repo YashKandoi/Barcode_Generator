@@ -6,7 +6,7 @@ app = Flask(__name__)
 # @app.route('/api/generateBarCode', methods=['POST'])
 @app.route("/")
 def generateBarCode():
-    frontend.upload_file()
+    # frontend.upload_file()
     # frontend.execute_code()
     return "Bar Code Generated Successfully"
 # if __name__ == '__main__':
