@@ -1,6 +1,9 @@
 import os
 from django.shortcuts import render
+
+from Main import execute_code
 from .serializer import formSerializer
+
 
 def my_view(request):
     if request.method == 'POST':
@@ -20,16 +23,15 @@ def my_view(request):
     return render(request, 'form.html', {'form': form})
 
 
-
-
 def process_inputs_and_generate_name(form_instance):
     text_input1 = form_instance.text_input1
     text_input2 = form_instance.text_input2
     text_input3 = form_instance.text_input3
     text_input4 = form_instance.text_input4
-    
-    output_file_name = f"{text_input1}_{text_input2}_{text_input3}_{text_input4}.pdf"
-    
+    file_path="../media/input_files/abcd.pdf"
+    execute_code(file_path, text_input1, text_input2)
+
+    output_file_name = "./output_files/temp.csv"
     return output_file_name
 
 
