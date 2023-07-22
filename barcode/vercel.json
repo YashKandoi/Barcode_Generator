@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "barcode/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize":"15mb",
+          "runtime":"python3.9"
+        }
+      },
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/python",
+        "config": {
+          "distDir": "your_dist_directory/"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "your_django_backend_url/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/your_frontend_directory/$1"
+      }
+    ]
+  }
+  
