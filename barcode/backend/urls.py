@@ -4,6 +4,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    # Other URL patterns...
-    path('', views.my_view, name='my-form'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('process/', views.process_data, name='process_data'),
+    path('download-output-csv/', views.download_output_csv, name='download_output_csv'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
