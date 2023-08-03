@@ -1,10 +1,8 @@
-# Track 2 LLM API Endpoint : Barcode_Generator
 
-Please check out the code on 9 July branch. This is currently going changes for deployment.
+# AI Arena 1.0: Barcode_Generator
+
 An AI based barcode generator which enables you to generate barcode of products by uploading their invoice and input the tax and profit percentage.
-Check out the demo video here: [https://lnkd.in/dQA2NaJA](https://drive.google.com/file/d/1yePaWPwNxN2HSAFCRaMqfFODaMGJ3_0U/view)
-We will soon be deploying this and releasing it for everyone to be able to use!
-
+Check out the demo video here: [https://drive.google.com/file/d/1WUWSJj-DN5u7FcSOgGZZxJ4j1EQnYcar/view?usp=sharing]
 ## How to Use
 
 ### Prereqs
@@ -12,18 +10,14 @@ Run the following command in terminal:
 pip install -r requirements.txt
 
 ### Run API
-1. Create a secret API key from https://app.nanonets.com/#/keys and paste it in nanonets_key.txt
-
-2. Create a secret API key from https://platform.openai.com/account/api-keys and paste it in openai_key.txt
+1. Create a secret API key from https://platform.openai.com/account/api-keys and paste it in openai_key.txt
+2. Go to openai_key.txt file and paste this there.
 
 If the key does not seem to work, then create a new OpenAI account with a different phone number and create a new key from that account
 
-Open a terminal and run the following command: python3 PostmanRunner.py
+Open a terminal and run the following command: python3 manage.py runserver
 
-Let the program run in the background
-
-Open the PostMan application on your computer, insert http://localhost:5000/api/generateBarCode (the link may differ based on your system's local host) in the POST prompt in a new tab on your workspace, and click on "Send"
-
-If for any reason you are unable to use the PostMan application or encounter any errors, you can run the App.py file with this command on your terminal: python3 App.py
+A local host link will be seen on the server. Click on this link to open the page.
+Input the file, the tax_percentage and the profit_percentage.
 
 Upload files in jpg format only!
