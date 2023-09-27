@@ -2,7 +2,7 @@
 # Barcode_Generator
 
 An AI based barcode generator which enables you to generate barcode of products by uploading their invoice and input the tax and profit percentage.
-Check out the demo video here: [https://drive.google.com/file/d/1WUWSJj-DN5u7FcSOgGZZxJ4j1EQnYcar/view?usp=sharing]
+Check out the demo video here: [https://drive.google.com/file/d/1ru9CrHJmbp2lnisI1ncXrDMBq1eu1rY7/view?usp=sharing]
 ## How to Use
 
 ### Prereqs
